@@ -1,5 +1,5 @@
 <template>
   <div class="flex items-center justify-center rounded-full overflow-hidden">
-    <img src="/img/avatar.png" alt="Avatar" class="w-auto h-auto">
+    <NuxtImg src="/img/avatar.webp" alt="Avatar"/>
   </div>
 </template>

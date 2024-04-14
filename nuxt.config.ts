@@ -10,7 +10,7 @@ export default defineNuxtConfig({
         },
     },
 
-    modules: ["@nuxt/fonts"],
+    modules: ["@nuxt/fonts", "@nuxt/image"],
     fonts: {
         families: [
             {name: "Monaco", provider: "local"}
