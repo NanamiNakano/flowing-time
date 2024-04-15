@@ -1,7 +1,17 @@
 {
-  "name": "nuxt-app",
-  "private": true,
+  "name": "flowing-time",
   "type": "module",
+  "homepage": "https://github.com/NanamiNakano/flowing-time#readme",
+  "author": {
+    "name": "Nanami Nakano",
+    "email": "nakano@thynanami.dev",
+    "url": "https://www.thynanami.dev"
+  },
+  "funding": {
+    "type": "patreon",
+    "url": "https://www.patreon.com/thynanami"
+  },
+  "license": "MIT",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
