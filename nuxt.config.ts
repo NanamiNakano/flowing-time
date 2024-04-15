@@ -2,6 +2,7 @@
 export default defineNuxtConfig({
     devtools: {enabled: true},
     css: ['~/assets/css/main.css', '@fortawesome/fontawesome-svg-core/styles.css'],
+    modules: ["@nuxt/fonts", "@nuxt/image"],
 
     postcss: {
         plugins: {
@@ -10,7 +11,6 @@ export default defineNuxtConfig({
         },
     },
 
-    modules: ["@nuxt/fonts", "@nuxt/image"],
     fonts: {
         families: [
             {name: "Monaco", provider: "local"}

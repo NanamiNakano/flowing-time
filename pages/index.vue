@@ -2,7 +2,7 @@
   <div class="flex flex-col h-screen">
     <!-- 大屏幕上的布局 -->
     <div class="hidden lg:flex flex-grow">
-      <div class="w-1/2 p-8 max-w-2xl mx-auto justify-center items-center">
+      <div class="w-1/2 max-w-2xl p-8 mx-auto flex justify-center items-center">
         <div class="h-full flex justify-center items-center">
           <Avatar/>
         </div>
@@ -17,14 +17,14 @@
           <p class="text-lg mb-4">
             A few word about you.
           </p>
-          <!-- 其他内容 -->
+          <Navigations/>
         </div>
       </div>
     </div>
 
     <!-- 小屏幕上的布局 -->
     <div class="lg:hidden flex-grow">
-      <div class="h-2/5 p-8 flex justify-center items-center">
+      <div class="h-2/5 p-8 mx-auto flex justify-center items-center">
         <div class="w-80 flex justify-center items-center">
           <Avatar/>
         </div>
@@ -38,7 +38,7 @@
         <p class="text-lg mb-4 mt-4">
           A few word about you.
         </p>
-        <!-- 其他内容 -->
+        <Navigations/>
       </div>
     </div>
   </div>

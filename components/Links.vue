@@ -1,20 +1,20 @@
 <template>
   <div class="flex justify-start space-x-4">
-    <nuxt-link to="https://github.com/NanamiNakano"
+    <NuxtLink to="https://github.com/NanamiNakano"
                class="rounded-full bg-gray-800 text-white p-2 flex items-center justify-center w-12 h-12">
       <font-awesome-icon icon="fa-brands fa-github" size="lg"/>
-    </nuxt-link>
-    <nuxt-link to="https://twitter.com/thynanami"
+    </NuxtLink>
+    <NuxtLink to="https://twitter.com/thynanami"
                class="rounded-full bg-blue-400 text-white p-2 flex items-center justify-center w-12 h-12">
       <font-awesome-icon icon="fa-brands fa-twitter" size="lg"/>
-    </nuxt-link>
-    <nuxt-link to="https://patreon.com/thynanami"
+    </NuxtLink>
+    <NuxtLink to="https://patreon.com/thynanami"
                class="rounded-full bg-orange-500 text-white p-2 flex items-center justify-center w-12 h-12">
       <font-awesome-icon icon="fa-brands fa-patreon" size="lg"/>
-    </nuxt-link>
-    <nuxt-link to="https://t.me/thynanami"
+    </NuxtLink>
+    <NuxtLink to="https://t.me/thynanami"
                class="rounded-full bg-blue-300 text-white p-2 flex items-center justify-center w-12 h-12">
       <font-awesome-icon icon="fa-brands fa-telegram" size="xl"/>
-    </nuxt-link>
+    </NuxtLink>
   </div>
 </template>
