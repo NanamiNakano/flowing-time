@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
     devtools: {enabled: true},
     css: ["@fortawesome/fontawesome-svg-core/styles.css"],
-    modules: ["@nuxt/fonts", "@nuxt/image", "@nuxt/ui", "@nuxt/eslint"],
+    modules: ["@nuxt/fonts", "@nuxt/image", "@nuxt/ui", "@nuxt/eslint", "@nuxtjs/seo"],
 
     postcss: {
         plugins: {
@@ -19,5 +19,12 @@ export default defineNuxtConfig({
 
     colorMode: {
         fallback: "light"
+    },
+
+    site: {
+        url: "https://www.thynanami.dev",
+        name: "流水の歳月",
+        description: "I can not hear the people sing.",
+        defaultLocale: "en"
     }
 })

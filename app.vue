@@ -8,14 +8,20 @@
 useHead({
   title: "流水の歳月",
   meta: [
-    {name: "description", content: "I can not hear the people sing."}
+    {name: "lang", content: "en"},
   ]
 })
 
 useSeoMeta({
   title: "流水の歳月",
   ogTitle: "流水の歳月",
+  twitterTitle: "流水の歳月",
   description: "I can not hear the people sing.",
   ogDescription: "I can not hear the people sing.",
+  twitterDescription: "I can not hear the people sing.",
+  ogUrl: "https://www.thynanami.dev",
+  twitterCard: "summary_large_image",
+  ogImage: "/img/ogimage.webp",
+  twitterImage: "/img/ogimage.webp"
 })
 </script>
