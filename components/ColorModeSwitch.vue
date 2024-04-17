@@ -14,7 +14,7 @@ const computedIcon = computed(() => {
 </script>
 
 <template>
-  <button @click="toggleColorMode" class="focus:outline-none">
+  <button class="focus:outline-none" @click="toggleColorMode">
     <FontAwesomeIcon :icon="computedIcon" size="xl"/>
   </button>
 </template>
