@@ -9,8 +9,8 @@ function toggleColorMode() {
 }
 
 const computedIcon = computed(() => {
-  return colorMode.preference === "light" ? ["fas", "moon"] : ["fas", "sun"];
-});
+  return colorMode.preference === "light" ? ["fas", "moon"] : ["fas", "sun"]
+})
 </script>
 
 <template>
