@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
     devtools: {enabled: true},
     css: ["@fortawesome/fontawesome-svg-core/styles.css"],
-    modules: ["@nuxt/fonts", "@nuxt/image", "@nuxt/ui"],
+    modules: ["@nuxt/fonts", "@nuxt/image", "@nuxt/ui", "@nuxt/eslint"],
 
     postcss: {
         plugins: {

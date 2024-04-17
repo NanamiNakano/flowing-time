@@ -24,6 +24,7 @@
     "@fortawesome/free-brands-svg-icons": "^6.5.2",
     "@fortawesome/free-solid-svg-icons": "^6.5.2",
     "@fortawesome/vue-fontawesome": "^3.0.6",
+    "@nuxt/eslint": "^0.3.7",
     "@nuxt/fonts": "^0.6.1",
     "@nuxt/image": "^1.5.0",
     "@nuxt/ui": "^2.15.2",
