@@ -6,7 +6,7 @@ const navigations = ref([{title: "About", link: "/about"}])
 
 <template>
   <ul class="list-none">
-    <li v-for="navigation in navigations" class="flex items-center">
+    <li v-for="navigation in navigations" :key="navigation.title" class="flex items-center">
       <NuxtLink :to="navigation.link">
       <span class="mr-2">
         <FontAwesomeIcon :icon="['fas', 'arrow-right']" />
