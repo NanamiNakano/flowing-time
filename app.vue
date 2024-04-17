@@ -1,13 +1,10 @@
 <template>
-  <SpeedInsights/>
   <NuxtLayout>
     <NuxtPage/>
   </NuxtLayout>
 </template>
 
 <script setup lang="ts">
-import { SpeedInsights } from '@vercel/speed-insights/vue';
-
 useHead({
   meta: [
     {name: "lang", content: "en"},
