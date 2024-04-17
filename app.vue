@@ -6,14 +6,12 @@
 
 <script setup lang="ts">
 useHead({
-  title: "流水の歳月",
   meta: [
     {name: "lang", content: "en"},
   ]
 })
 
 useSeoMeta({
-  title: "流水の歳月",
   ogTitle: "流水の歳月",
   twitterTitle: "流水の歳月",
   description: "I can not hear the people sing.",
