@@ -11,6 +11,11 @@ export default defineNuxtConfig({
         },
     },
 
+    runtimeConfig: {
+        githubAppId: "",
+        githubAppPrivateKey: ""
+    },
+
     app: {
         layoutTransition: {name: 'layout', mode: 'out-in'}
     },

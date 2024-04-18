@@ -10,7 +10,7 @@ const navigations = ref([{title: "About", link: "/about"}, {title: "Friends", li
       <span class="mr-2">
         <FontAwesomeIcon :icon="['fas', 'arrow-right']"/>
       </span>
-      {{ navigation.title }}
+      <UButton :label="navigation.title" color="white" variant="link"/>
     </NuxtLink>
   </nav>
 </template>
