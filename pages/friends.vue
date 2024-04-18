@@ -19,6 +19,12 @@ const links = ref([
     link: "https://blog.cnmobile.link/",
     iconUrl: "https://cos.cnmobile.link/avatar/me.webp",
     description: "May all the beauty be blessed.——《Moon Halo》"
+  },
+  {
+    title: "Yazawazi's Blog",
+    link: "https://yazawazi.moe/",
+    iconUrl: "https://yazawazi.moe/static/logo.png",
+    description: "On the side of the sky"
   }
 ])
 </script>
