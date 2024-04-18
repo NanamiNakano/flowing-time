@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col">
     <PageHeader>
-      Add Yours
+      <GitHubPanel/>
     </PageHeader>
     <body>
     <slot/>
