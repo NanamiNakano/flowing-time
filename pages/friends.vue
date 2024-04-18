@@ -6,7 +6,7 @@ useHead({
 })
 
 definePageMeta({
-  layout: "pages"
+  layout: "friends"
 })
 </script>
 

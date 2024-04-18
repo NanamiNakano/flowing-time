@@ -2,10 +2,6 @@
 useHead({
   title: "About"
 })
-
-definePageMeta({
-  layout: "pages"
-})
 </script>
 
 <template>

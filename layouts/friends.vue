@@ -1,6 +1,8 @@
 <template>
   <div class="flex flex-col">
-    <PageHeader/>
+    <PageHeader>
+      Add Yours
+    </PageHeader>
     <body>
     <slot/>
     </body>
