@@ -1,5 +1,6 @@
 <script setup lang="ts">
 
+
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 
 const colorMode = useColorMode()
@@ -14,7 +15,7 @@ const computedIcon = computed(() => {
 </script>
 
 <template>
-  <button class="focus:outline-none" @click="toggleColorMode">
+  <button @click="toggleColorMode">
     <FontAwesomeIcon :icon="computedIcon" size="xl"/>
   </button>
 </template>

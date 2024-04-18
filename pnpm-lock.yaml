@@ -38,6 +38,9 @@ importers:
       nuxt:
         specifier: ^3.11.2
         version: 3.11.2(@parcel/watcher@2.4.1)(@types/node@20.12.7)(@unocss/reset@0.59.2)(encoding@0.1.13)(eslint@9.0.0)(floating-vue@5.2.2(@nuxt/kit@3.11.2(rollup@4.14.3))(vue@3.4.22(typescript@5.4.5)))(fuse.js@6.6.2)(ioredis@5.3.2)(optionator@0.9.3)(rollup@4.14.3)(sass@1.75.0)(terser@5.30.3)(typescript@5.4.5)(unocss@0.59.2(@unocss/webpack@0.58.9(rollup@4.14.3)(webpack@5.91.0(esbuild@0.20.2)))(postcss@8.4.38)(rollup@4.14.3)(vite@5.2.9(@types/node@20.12.7)(sass@1.75.0)(terser@5.30.3)))(vite@5.2.9(@types/node@20.12.7)(sass@1.75.0)(terser@5.30.3))
+      tailwindcss:
+        specifier: ^3.4.3
+        version: 3.4.3
       vue:
         specifier: ^3.4.22
         version: 3.4.22(typescript@5.4.5)
@@ -57,9 +60,6 @@ importers:
       postcss:
         specifier: ^8.4.38
         version: 8.4.38
-      tailwindcss:
-        specifier: ^3.4.3
-        version: 3.4.3
 
 packages:
 
