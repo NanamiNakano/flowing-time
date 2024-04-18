@@ -1,3 +1,13 @@
+<script setup lang="ts">
+useHead({
+  title: "About"
+})
+
+definePageMeta({
+  layout: "pages"
+})
+</script>
+
 <template>
   <div class="container mx-auto px-8">
     <div class="flex flex-col lg:flex-row justify-between lg:items-center">
@@ -25,13 +35,3 @@
     </div>
   </div>
 </template>
-
-<script setup lang="ts">
-useHead({
-  title: "About"
-})
-
-definePageMeta({
-  layout: "about"
-})
-</script>

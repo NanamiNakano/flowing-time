@@ -8,6 +8,7 @@
 useHead({
   meta: [
     {name: "lang", content: "en"},
+    {name: "icon", content: "/img/apple-touch-icon.png"}
   ]
 })
 

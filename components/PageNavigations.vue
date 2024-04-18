@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 
-const navigations = ref([{title: "About", link: "/about"}])
+const navigations = ref([{title: "About", link: "/about"}, {title: "Friends", link: "/friends"}]);
 </script>
 
 <template>
-  <nav class="list-none flex items-center">
+  <nav class="list-none flex flex-col justify-start">
     <NuxtLink v-for="navigation in navigations" :key="navigation.title" :to="navigation.link">
       <span class="mr-2">
         <FontAwesomeIcon :icon="['fas', 'arrow-right']"/>

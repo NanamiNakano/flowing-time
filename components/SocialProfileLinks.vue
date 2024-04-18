@@ -16,7 +16,7 @@
       <FontAwesomeIcon :icon="['fab', 'patreon']" size="lg"/>
     </NuxtLink>
     <NuxtLink
-        to="https://t.me/thynanami"
+        to="https://thynanami.t.me"
         class="rounded-full bg-blue-300 text-white p-2 flex items-center justify-center w-12 h-12">
       <FontAwesomeIcon :icon="['fab', 'telegram']" size="xl"/>
     </NuxtLink>
