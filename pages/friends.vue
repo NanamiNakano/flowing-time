@@ -7,12 +7,20 @@ definePageMeta({
   layout: "pages"
 })
 
-const links = ref([{
-  title: "Example Domain",
-  link: "https://example.com/",
-  iconUrl: "https://www.iana.org/_img/bookmark_icon.ico",
-  description: "This domain is for use in illustrative examples in documents.",
-}])
+const links = ref([
+  {
+    title: "Example Domain",
+    link: "https://example.com/",
+    iconUrl: "https://www.iana.org/_img/bookmark_icon.ico",
+    description: "This domain is for use in illustrative examples in documents."
+  },
+  {
+    title: "Yukina's Blog",
+    link: "https://blog.cnmobile.link/",
+    iconUrl: "https://cos.cnmobile.link/avatar/me.webp",
+    description: "May all the beauty be blessed.——《Moon Halo》"
+  }
+])
 </script>
 
 <template>
@@ -23,8 +31,8 @@ const links = ref([{
     <div class="space-y-6">
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <LinkCard
-v-for="link in links" :key="link.link" :title="link.title" :link="link.link" :icon-url="link.iconUrl"
-                  :description="link.description"/>
+            v-for="link in links" :key="link.link" :title="link.title" :link="link.link" :icon-url="link.iconUrl"
+            :description="link.description"/>
       </div>
     </div>
   </div>
