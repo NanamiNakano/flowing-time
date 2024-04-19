@@ -10,7 +10,7 @@ const isOpen = ref(false)
 
     <UModal v-model="isOpen">
       <div class="p-4 flex justify-center">
-        <NuxtLink to="https://github.com/NanamiNakano/flowing-time/edit/main/assets/data/links.json">
+        <NuxtLink to="https://github.com/NanamiNakano/flowing-time/edit/main/assets/data/links.json" target="_blank">
           <UButton class="flex" color="pink">
             <FontAwesomeIcon :icon="['fab', 'github']" size="lg"/>
             Edit on GitHub
