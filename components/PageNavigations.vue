@@ -6,7 +6,7 @@ const navigations = ref([{title: "About", link: "/about"}, {title: "Friends", li
 
 <template>
   <nav class="list-none flex flex-col justify-start">
-    <NuxtLink v-for="navigation in navigations" :key="navigation.title" :to="navigation.link"  target="_blank">
+    <NuxtLink v-for="navigation in navigations" :key="navigation.title" :to="navigation.link">
       <span class="mr-2">
         <FontAwesomeIcon :icon="['fas', 'arrow-right']"/>
       </span>
