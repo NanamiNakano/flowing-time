@@ -20,7 +20,7 @@ defineProps({
 </script>
 
 <template>
-  <NuxtLink :to="link" class="bg-gray-100 rounded-lg overflow-hidden dark:bg-gray-800 flex">
+  <NuxtLink :to="link" class="bg-gray-100 rounded-lg overflow-hidden dark:bg-gray-800 flex" target="_blank">
     <div class="p-4 space-y-2 flex-1">
       <div class="flex items-center space-x-3">
         <div class="rounded-lg overflow-hidden">
