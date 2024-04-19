@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
+
 const isOpen = ref(false)
 </script>
 
@@ -7,8 +9,13 @@ const isOpen = ref(false)
     <UButton label="Add yours" color="pink" variant="outline" @click="isOpen = true"/>
 
     <UModal v-model="isOpen">
-      <div class="p-4">
-        <USkeleton class="h-48"/>
+      <div class="p-4 flex justify-center">
+        <NuxtLink to="https://github.com/NanamiNakano/flowing-time/edit/main/assets/data/links.json">
+          <UButton class="flex" color="pink">
+            <FontAwesomeIcon :icon="['fab', 'github']" size="lg"/>
+            Edit on GitHub
+          </UButton>
+        </NuxtLink>
       </div>
     </UModal>
   </div>
