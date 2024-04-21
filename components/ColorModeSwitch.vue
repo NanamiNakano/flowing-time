@@ -15,7 +15,7 @@ const computedIcon = computed(() => {
 </script>
 
 <template>
-  <button @click="toggleColorMode">
+  <UButton variant="ghost" color="white" @click="toggleColorMode">
     <FontAwesomeIcon :icon="computedIcon" size="xl"/>
-  </button>
+  </UButton>
 </template>

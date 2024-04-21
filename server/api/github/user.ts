@@ -5,11 +5,14 @@ export default defineEventHandler(async (event) => {
     if (rawCookie === undefined) {
         return "Error"
     }
-    const cookie = JSON.parse(<string>getCookie(event, "GitHubOauthResponse")) as OauthResponse
+    const cookie = JSON.parse(<string>rawCookie) as OauthResponse
 
     return await $fetch("https://api.github.com/user", {
         headers: {
             Authorization: `Bearer ${cookie.access_token}`
         }
+    }).catch(() => {
+        deleteCookie(event, "GitHubOauthResponse")
+        return "Error"
     }) as UserResponse
 })

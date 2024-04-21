@@ -18,6 +18,11 @@ function auth() {
     external: true
   })
 }
+
+function logout() {
+  $fetch("/api/github/logout")
+  location.reload()
+}
 </script>
 
 <template>
@@ -27,14 +32,27 @@ function auth() {
     <UModal v-model="isOpen">
       <div class="container p-4 flex flex-col justify-center items-center">
         <div class="flex flex-col items-center">
-          <UButton v-if="authorized" color="pink">
-            <FontAwesomeIcon :icon="['fab', 'github']" size="lg"/>
-            {{ user.name }}
-          </UButton>
-          <UButton v-else color="pink" @click="auth">
-            <FontAwesomeIcon :icon="['fab', 'github']" size="lg"/>
-            Auth with GitHub
-          </UButton>
+          <div v-if="authorized">
+            <div class="container flex-row items-center space-x-2">
+            <UButton color="pink">
+              <FontAwesomeIcon :icon="['fab', 'github']" size="lg"/>
+              {{ user.login }}
+            </UButton>
+            <UButton @click="logout" color="white" variant="ghost">
+              <FontAwesomeIcon :icon="['fas', 'right-from-bracket']" size="lg"/>
+            </UButton>
+            </div>
+
+            <UDivider class="flex py-3"/>
+            <LinkForm/>
+          </div>
+
+          <div v-else>
+            <UButton color="pink" @click="auth">
+              <FontAwesomeIcon :icon="['fab', 'github']" size="lg"/>
+              Auth with GitHub
+            </UButton>
+          </div>
         </div>
       </div>
     </UModal>
