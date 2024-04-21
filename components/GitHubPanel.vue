@@ -1,7 +1,32 @@
 <script setup lang="ts">
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
+import type {UserResponse} from "~/types/github/user";
 
+const runtimeConfig = useRuntimeConfig()
 const isOpen = ref(false)
+const authorized = ref(false)
+const username = ref("")
+
+onMounted(async () =>{
+  const oauthResponseCookie = useCookie("GitHubOauthResponse")
+  if (oauthResponseCookie.value !== null && oauthResponseCookie.value !== undefined) {
+    authorized.value = true
+    const cookieValue = oauthResponseCookie.value as unknown as OauthResponse
+    const response = await $fetch("https://api.github.com/user", {
+      headers: {
+        Authorization: `Bearer ${cookieValue.access_token}`
+      }
+    }) as UserResponse
+    console.log(response.name)
+    username.value = response.name
+  }
+
+})
+function auth() {
+  navigateTo(`https://github.com/login/oauth/authorize?client_id=${runtimeConfig.public.github.clientId}&scope=user&redirect_uri=${runtimeConfig.public.site.uri}/github/callback`, {
+    external: true
+  })
+}
 </script>
 
 <template>
@@ -9,13 +34,18 @@ const isOpen = ref(false)
     <UButton label="Add yours" color="pink" variant="outline" @click="isOpen = true"/>
 
     <UModal v-model="isOpen">
-      <div class="p-4 flex justify-center">
-        <NuxtLink to="https://github.com/NanamiNakano/flowing-time/edit/main/assets/data/links.json" target="_blank">
-          <UButton class="flex" color="pink">
+      <div class="container p-4 flex flex-col justify-center items-center">
+        <div class="flex flex-col items-center">
+          {{ authorized }}
+          <UButton v-if="authorized" color="pink">
             <FontAwesomeIcon :icon="['fab', 'github']" size="lg"/>
-            Edit on GitHub
+            {{ username }}
           </UButton>
-        </NuxtLink>
+          <UButton v-else @click="auth" color="pink">
+            <FontAwesomeIcon :icon="['fab', 'github']" size="lg"/>
+            Auth with GitHub
+          </UButton>
+        </div>
       </div>
     </UModal>
   </div>

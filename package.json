@@ -31,7 +31,6 @@
     "@vercel/analytics": "^1.2.2",
     "badge-maker": "^3.3.1",
     "nuxt": "^3.11.2",
-    "octokit": "^3.2.0",
     "tailwindcss": "^3.4.3",
     "vue": "^3.4.22",
     "vue-router": "^4.3.0"
