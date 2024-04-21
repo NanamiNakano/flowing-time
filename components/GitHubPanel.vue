@@ -5,19 +5,12 @@ import type {UserResponse} from "~/types/github/user";
 const runtimeConfig = useRuntimeConfig()
 const isOpen = ref(false)
 const authorized = ref(false)
-const username = ref("")
+const user = ref()
 
-
-const oauthResponseCookie = useCookie("GitHubOauthResponse")
-if (oauthResponseCookie.value !== undefined) {
+const response = await $fetch("/api/github/user")
+if (response !== "Error") {
   authorized.value = true
-  const cookieValue = oauthResponseCookie.value as unknown as OauthResponse
-  const response = await $fetch("https://api.github.com/user", {
-    headers: {
-      Authorization: `Bearer ${cookieValue.access_token}`
-    }
-  }) as UserResponse
-  username.value = response.name
+  user.value = response as UserResponse
 }
 
 function auth() {
@@ -36,7 +29,7 @@ function auth() {
         <div class="flex flex-col items-center">
           <UButton v-if="authorized" color="pink">
             <FontAwesomeIcon :icon="['fab', 'github']" size="lg"/>
-            {{ username }}
+            {{ user.name }}
           </UButton>
           <UButton v-else color="pink" @click="auth">
             <FontAwesomeIcon :icon="['fab', 'github']" size="lg"/>

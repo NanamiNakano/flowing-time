@@ -56,11 +56,5 @@ export default defineNuxtConfig({
             "I can not hear the people sing.",
         defaultLocale:
             "en"
-    },
-
-    routeRules: {
-        "/friends": {
-            ssr: true
-        }
     }
 })
