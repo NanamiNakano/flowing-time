@@ -24,7 +24,6 @@ export default defineEventHandler(async (event) => {
     setCookie(event, "GitHubOauthResponse", JSON.stringify(response),{
         expires: date,
         secure: true,
-        httpOnly: true,
         sameSite: "strict"
     })
 

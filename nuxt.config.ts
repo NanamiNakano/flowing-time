@@ -56,10 +56,11 @@ export default defineNuxtConfig({
             "I can not hear the people sing.",
         defaultLocale:
             "en"
-    }
-    ,
+    },
 
-    alias: {
-        cookie: "cookie"
+    routeRules: {
+        "/friends": {
+            ssr: true
+        }
     }
 })
