@@ -26,18 +26,18 @@ function logout() {
 
 <template>
   <div>
-    <UButton label="Add yours" color="pink" variant="outline" @click="isOpen = true"/>
+    <UButton label="Add yours" variant="outline" @click="isOpen = true"/>
 
     <UModal v-model="isOpen">
       <div class="container p-4 flex flex-col justify-center items-center">
         <div class="flex flex-col items-center">
           <div v-if="authorized">
             <div class="container flex-row items-center space-x-2">
-            <UButton color="pink">
+            <UButton>
               <FontAwesomeIcon :icon="['fab', 'github']" size="lg"/>
               {{ user.login }}
             </UButton>
-            <UButton @click="logout" color="white" variant="ghost">
+            <UButton color="white" variant="ghost" @click="logout">
               <FontAwesomeIcon :icon="['fas', 'right-from-bracket']" size="lg"/>
             </UButton>
             </div>
@@ -47,7 +47,7 @@ function logout() {
           </div>
 
           <div v-else>
-            <UButton color="pink" @click="auth">
+            <UButton @click="auth">
               <FontAwesomeIcon :icon="['fab', 'github']" size="lg"/>
               Auth with GitHub
             </UButton>
