@@ -17,11 +17,18 @@ export default defineNuxtConfig({
     },
 
     runtimeConfig: {
+        public: {
+            site: {
+                uri: "",
+            },
+            github: {
+                appId: "",
+                clientId: "",
+            }
+        },
         github: {
-            appId: process.env.GITHUB_APP_ID,
-            privateKey: process.env.NUXT_GITHUB_PRIVATE_KEY,
-            clientId: process.env.NUXT_GITHUB_CLIENT_ID,
-            clientSecret: process.env.NUXT_GITHUB_CLIENT_SECRET,
+            privateKey: "",
+            clientSecret: "",
         }
     },
 
@@ -33,20 +40,21 @@ export default defineNuxtConfig({
         families: [
             {name: "Monaco", provider: "local"}
         ]
-    },
+    }
+    ,
 
     colorMode: {
         fallback: "light"
-    },
+    }
+    ,
 
     site: {
         url: "https://www.thynanami.dev",
-        name: "流水の歳月",
-        description: "I can not hear the people sing.",
-        defaultLocale: "en"
-    },
-
-    alias: {
-        cookie: "cookie"
+        name:
+            "流水の歳月",
+        description:
+            "I can not hear the people sing.",
+        defaultLocale:
+            "en"
     }
 })
