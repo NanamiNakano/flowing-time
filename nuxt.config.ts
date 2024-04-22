@@ -23,6 +23,7 @@ export default defineNuxtConfig({
             },
             github: {
                 appId: "",
+                appName: "",
                 clientId: "",
             }
         },

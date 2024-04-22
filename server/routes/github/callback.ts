@@ -49,7 +49,7 @@ export default defineEventHandler(async (event) => {
         await app.octokit.request(`/users/${user.login}/installation`)
     } catch (error) {
         if (error instanceof RequestError && error.status === 404) {
-            return sendRedirect(event, "https://github.com/apps/links-updater/installations/new")
+            return sendRedirect(event, `https://github.com/apps/${runtimeConfig.public.github.appName}/installations/new`)
         }
         return "Error"
     }
