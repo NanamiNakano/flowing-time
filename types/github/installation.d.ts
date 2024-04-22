@@ -10,14 +10,14 @@ declare interface InstallationResponse {
     target_id: number
     target_type: string
     permissions: Permissions
-    events: any[]
+    events: string[] | null
     created_at: string
     updated_at: string
-    single_file_name: any
+    single_file_name: string | null
     has_multiple_single_files: boolean
-    single_file_paths: any[]
-    suspended_by: any
-    suspended_at: any
+    single_file_paths: string[] | null
+    suspended_by: string | null
+    suspended_at: string | null
 }
 
 declare interface Account {
