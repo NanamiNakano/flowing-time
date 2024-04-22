@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
-import type {UserResponse} from "~/types/github/user";
 
 const runtimeConfig = useRuntimeConfig()
 const isOpen = ref(false)
@@ -10,7 +9,7 @@ const user = ref()
 const response = await $fetch("/api/github/user")
 if (response !== "Error") {
   authorized.value = true
-  user.value = response as UserResponse
+  user.value = response as User
 }
 
 function auth() {

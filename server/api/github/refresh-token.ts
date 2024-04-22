@@ -1,5 +1,3 @@
-const runtimeConfig = useRuntimeConfig()
-
 export default defineEventHandler(async (event) => {
     const rawCookie = getCookie(event, "GitHubOauthResponse")
     if (rawCookie === undefined) {

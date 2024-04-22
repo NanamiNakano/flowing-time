@@ -1,4 +1,4 @@
-export interface UserResponse {
+declare interface User {
     login: string;
     id: number,
     node_id: string,

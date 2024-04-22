@@ -1,5 +1,3 @@
-import type {UserResponse} from "~/types/github/user";
-
 export default defineEventHandler(async (event) => {
     const rawCookie = getCookie(event, "GitHubOauthResponse")
     if (rawCookie === undefined) {
@@ -9,10 +7,11 @@ export default defineEventHandler(async (event) => {
 
     return await $fetch("https://api.github.com/user", {
         headers: {
-            Authorization: `Bearer ${cookie.access_token}`
+            Authorization: `Bearer ${cookie.access_token}`,
+            Accept: "application/json"
         }
     }).catch(() => {
         deleteCookie(event, "GitHubOauthResponse")
         return "Error"
-    }) as UserResponse
+    }) as User
 })

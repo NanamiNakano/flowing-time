@@ -1,23 +1,20 @@
-import {Link, LinkSchema} from "~/types/link";
+import {z} from "zod";
 
+const LinkSchema = z.object({
+    title: z.string().min(1),
+    link: z.string().url("Invalid URL").min(1),
+    iconUrl: z.string().url("Invalid URL").min(1),
+    description: z.string().min(1),
+});
 
-export default defineEventHandler((event) => {
+export default defineEventHandler(async (event) => {
     if (event.method !== "POST") {
         return "Error"
     }
-    const data = getRouterParams(event) as Link
+    const data = getQuery(event) as Link
     try {
         LinkSchema.parse(data)
     } catch (e) {
         return "Error"
     }
-
-    const rawCookie = getCookie(event, "GitHubOauthResponse")
-    if (rawCookie === undefined) {
-        return "Error"
-    }
-    const cookie = JSON.parse(<string>rawCookie) as OauthResponse
-
-
-    return "E"
 })
