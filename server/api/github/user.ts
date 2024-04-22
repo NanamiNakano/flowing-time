@@ -9,6 +9,13 @@ export default defineEventHandler(async (event) => {
         headers: {
             Authorization: `Bearer ${cookie.access_token}`,
             Accept: "application/json"
+        },
+        async onResponseError({response}) {
+            if (response.status === 401) {
+                await $fetch("/api/github/refresh-token")
+            } else {
+                deleteCookie(event, "GitHubOauthResponse")
+            }
         }
     }).catch(() => {
         deleteCookie(event, "GitHubOauthResponse")
