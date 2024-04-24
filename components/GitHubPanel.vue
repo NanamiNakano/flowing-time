@@ -53,11 +53,11 @@ async function forkRepo() {
             <UDivider class="flex py-3" label="Step 1"/>
 
             <div class="container flex flex-row justify-between items-center">
-              <UButton @click="forkRepo" :disabled="forked">
+              <UButton :disabled="forked" @click="forkRepo">
                 <FontAwesomeIcon :icon="['fas', 'code-fork']" size="lg"/>
                 Fork repo
               </UButton>
-              <FontAwesomeIcon :icon="['fas', 'check']" v-if="forked" size="lg"/>
+              <FontAwesomeIcon v-if="forked" :icon="['fas', 'check']" size="lg"/>
             </div>
 
             <UDivider class="flex py-3" label="Step 2"/>

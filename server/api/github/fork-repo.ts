@@ -1,4 +1,4 @@
-import {Octokit, RequestError} from "octokit";
+import {Octokit} from "octokit";
 
 export default defineEventHandler(async (event) => {
     const rawCookie = getCookie(event, "GitHubOauthResponse")

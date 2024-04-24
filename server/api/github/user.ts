@@ -19,12 +19,11 @@ export default defineEventHandler(async (event) => {
                 }
             }
         }) as User
-        const people = {
+        return  {
             username: user.login,
             display_name: user.name,
             email: user.email
         } as People
-        return people
     } catch (error) {
         console.log(error)
         return "Error"
