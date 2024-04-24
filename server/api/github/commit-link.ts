@@ -31,14 +31,13 @@ export default defineEventHandler(async (event) => {
             if ("content" in result.data) {
                 const linkArray = JSON.parse(Buffer.from(result.data.content, 'base64').toString()) as Link[]
                 linkArray.push(data)
-                basedNewContent = btoa(encodeURIComponent(JSON.stringify(linkArray, null, 2))) //BUG: Unable to encode the string correctly
+                basedNewContent = Buffer.from(JSON.stringify(linkArray, null, 2), 'utf-8').toString('base64')
                 sha = result.data.sha
             } else {
                 throw Error
             }
         })
 
-        console.log(sha)
         await octokit.request('PUT /repos/{owner}/{repo}/contents/{path}', {
             owner: people.username,
             repo: "flowing-time",
