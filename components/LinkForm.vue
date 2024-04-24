@@ -2,6 +2,10 @@
 import {z} from "zod"
 import type {FormSubmitEvent} from "#ui/types"
 
+defineProps({
+  disabled: Boolean,
+})
+
 const schema = z.object({
   title: z.string(),
   link: z.string().url("Invalid URL"),
@@ -18,10 +22,20 @@ const state = ref({
   description: undefined,
 })
 
+let user: People
+const response = await $fetch("/api/github/user")
+if (response !== "Error") {
+  user = response as People
+}
+
+
 async function onSubmit(event: FormSubmitEvent<Schema>) {
   await $fetch("/api/github/commit-link", {
     method: "POST",
-    params: event.data
+    params: {
+      data: event.data,
+      user: user
+    }
   })
 }
 </script>
@@ -44,7 +58,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
       <UInput v-model="state.description"/>
     </UFormGroup>
 
-    <UButton type="submit" color="pink">
+    <UButton type="submit" color="pink" :disabled="disabled">
       Submit
     </UButton>
   </UForm>

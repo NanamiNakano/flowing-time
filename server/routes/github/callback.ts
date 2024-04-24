@@ -52,15 +52,7 @@ export default defineEventHandler(async (event) => {
     })
 
     try {
-        const installationResponse =
-            await app.octokit.request(`/users/${user.login}/installation`) as unknown as InstallationResponse
-
-        setCookie(event, "GitHubInstallationId", `${installationResponse.id}`, {
-            httpOnly: true,
-            sameSite: "strict",
-            secure: true,
-            expires: date
-        })
+        await app.octokit.request(`/users/${user.login}/installation`)
     } catch (error) {
         if (error instanceof RequestError && error.status === 404) {
             return sendRedirect(event, `https://github.com/apps/${runtimeConfig.public.github.appName}/installations/new`)

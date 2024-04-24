@@ -19,9 +19,14 @@ export default defineEventHandler(async (event) => {
                 }
             }
         }) as User
-
-        return user
+        const people = {
+            username: user.login,
+            display_name: user.name,
+            email: user.email
+        } as People
+        return people
     } catch (error) {
+        console.log(error)
         return "Error"
     }
 })
