@@ -64,11 +64,20 @@ async function forkRepo() {
             <LinkForm :disabled="!forked"/>
           </div>
 
-          <div v-else>
+          <div v-else class="container flex flex-row justify-center items-center space-x-2">
             <UButton @click="auth">
               <FontAwesomeIcon :icon="['fab', 'github']" size="lg"/>
               Auth with GitHub
             </UButton>
+
+            <div>
+              OR
+            </div>
+
+              <UButton :padded="false" variant="link" to="https://github.com/NanamiNakano/flowing-time/edit/main/assets/data/links.json" target="_blank">
+                Edit manually on GitHub
+                <FontAwesomeIcon :icon="['fas', 'up-right-from-square']"/>
+              </UButton>
           </div>
         </div>
       </div>
