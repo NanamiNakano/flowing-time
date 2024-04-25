@@ -62,5 +62,15 @@ export default defineNuxtConfig({
             "I can not hear the people sing.",
         defaultLocale:
             "en"
+    },
+
+    content: {
+        highlight: {
+            theme: {
+                default: "min-dark",
+                dark: "min-dark",
+                light: "min-light",
+            }
+        }
     }
 })

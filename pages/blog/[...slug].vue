@@ -10,7 +10,7 @@ const path = computed(() => {
 <template>
   <main>
     <div class="container mx-auto px-8 lg:px-16 flex justify-center">
-      <article class="prose dark:prose-invert lg:prose-lg">
+      <article class="prose dark:prose-invert prose-code:no-tailwind lg:prose-lg">
         <ContentDoc :path="path"/>
       </article>
     </div>
