@@ -32,3 +32,9 @@ declare interface User {
     created_at: string,
     updated_at: string,
 }
+
+declare interface People {
+    username: string,
+    display_name: string,
+    email: string
+}

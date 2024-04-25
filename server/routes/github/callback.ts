@@ -6,19 +6,22 @@ export default defineEventHandler(async (event) => {
         return "Error"
     }
 
-    const oauthResponse = await $fetch("https://github.com/login/oauth/access_token", {
-        method: "POST",
-        params: {
-            client_id: runtimeConfig.public.github.clientId,
-            client_secret: runtimeConfig.github.clientSecret,
-            code: query.code,
-        },
-        headers: {
-            Accept: "application/json"
-        }
-    }).catch(() => {
+    let oauthResponse
+    try {
+        oauthResponse = await $fetch("https://github.com/login/oauth/access_token", {
+            method: "POST",
+            params: {
+                client_id: runtimeConfig.public.github.clientId,
+                client_secret: runtimeConfig.github.clientSecret,
+                code: query.code,
+            },
+            headers: {
+                Accept: "application/json"
+            }
+        }) as OauthResponse
+    } catch (error) {
         return "Error"
-    }) as OauthResponse
+    }
 
     const date = new Date()
     date.setTime(date.getTime() + oauthResponse.refresh_token_expires_in)
@@ -30,15 +33,18 @@ export default defineEventHandler(async (event) => {
         sameSite: "strict"
     })
 
-    const user = await $fetch("https://api.github.com/user", {
-        headers: {
-            Authorization: `Bearer ${oauthResponse.access_token}`,
-            Accept: "application/json"
-        }
-    }).catch(() => {
+    let user
+    try {
+        user = await $fetch("https://api.github.com/user", {
+            headers: {
+                Authorization: `Bearer ${oauthResponse.access_token}`,
+                Accept: "application/json"
+            }
+        }) as User
+    } catch (error) {
         deleteCookie(event, "GitHubOauthResponse")
         return "Error"
-    }) as User
+    }
 
     const app = new App({
         appId: runtimeConfig.public.github.appId,

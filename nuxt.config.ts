@@ -41,13 +41,11 @@ export default defineNuxtConfig({
         families: [
             {name: "Monaco", provider: "local"}
         ]
-    }
-    ,
+    },
 
     colorMode: {
         fallback: "light"
-    }
-    ,
+    },
 
     site: {
         url: "https://www.thynanami.dev",
