@@ -5,7 +5,7 @@ useHead({
 </script>
 
 <template>
-  <div class="container mx-auto px-16">
+  <div class="container mx-auto px-8 lg:px-16">
     <div class="flex flex-col lg:flex-row justify-between lg:items-center">
       <div class="text-left space-y-4">
         <h1 class="text-5xl font-light">World, Hello!</h1>
