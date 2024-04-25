@@ -11,7 +11,7 @@ definePageMeta({
 </script>
 
 <template>
-  <div class="container mx-auto px-8">
+  <div class="container mx-auto px-16">
     <div class="text-left py-4">
       <h1 class="text-5xl font-light">Friends</h1>
     </div>

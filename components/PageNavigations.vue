@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 
-const navigations = ref([{title: "About", link: "/about"}, {title: "Friends", link: "/friends"}]);
+const navigations = ref([{title: "About", link: "/about"}, {title: "Friends", link: "/friends"}, {title: "Blogs", link: "/blog"}]);
 </script>
 
 <template>
