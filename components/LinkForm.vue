@@ -24,11 +24,7 @@ const state = ref({
 })
 const submitted = ref(false)
 const submittable = computed(() => {
-  if (props.disabled || (!props.disabled && submitted.value)) {
-    return true
-  } else {
-    return false
-  }
+  return props.disabled || (!props.disabled && submitted.value);
 })
 
 let user: People

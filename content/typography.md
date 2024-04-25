@@ -1,7 +1,8 @@
-Markdown Cheatsheet<a name="TOP"></a>
+Markdown Typography<a name="TOP"></a>
 ===================
 
 - - - - 
+
 # Heading 1 #
 
     Markup :  # Heading 1 #
@@ -25,7 +26,6 @@ Markdown Cheatsheet<a name="TOP"></a>
 #### Heading 4 ####
 
     Markup :  #### Heading 4 ####
-
 
 Common text
 
@@ -57,10 +57,10 @@ ___Strong emphasized text___
 
 Table, like this one :
 
-First Header  | Second Header
-------------- | -------------
-Content Cell  | Content Cell
-Content Cell  | Content Cell
+ First Header | Second Header 
+--------------|---------------
+ Content Cell | Content Cell  
+ Content Cell | Content Cell  
 
 ```
 First Header  | Second Header
@@ -71,10 +71,10 @@ Content Cell  | Content Cell
 
 Adding a pipe `|` in a cell :
 
-First Header  | Second Header
-------------- | -------------
-Content Cell  | Content Cell
-Content Cell  | \|
+ First Header | Second Header 
+--------------|---------------
+ Content Cell | Content Cell  
+ Content Cell | \|            
 
 ```
 First Header  | Second Header
@@ -85,10 +85,10 @@ Content Cell  |  \|
 
 Left, right and center aligned table
 
-Left aligned Header | Right aligned Header | Center aligned Header
-| :--- | ---: | :---:
-Content Cell  | Content Cell | Content Cell
-Content Cell  | Content Cell | Content Cell
+ Left aligned Header | Right aligned Header | Center aligned Header 
+|:--------------------|---------------------:|:---------------------:
+ Content Cell        |         Content Cell |     Content Cell      
+ Content Cell        |         Content Cell |     Content Cell      
 
 ```
 Left aligned Header | Right aligned Header | Center aligned Header
@@ -102,7 +102,7 @@ Content Cell  | Content Cell | Content Cell
     Markup :  `code()`
 
 ```javascript
-    var specificLanguage_code = 
+    var specificLanguage_code =
     {
         "data": {
             "lookedUpPlatform": 1,
@@ -223,25 +223,26 @@ Hotkey:
 
 Hotkey list:
 
-| Key | Symbol |
-| --- | --- |
-| Option | ⌥ |
-| Control | ⌃ |
-| Command | ⌘ |
-| Shift | ⇧ |
-| Caps Lock | ⇪ |
-| Tab | ⇥ |
-| Esc | ⎋ |
-| Power | ⌽ |
-| Return | ↩ |
-| Delete | ⌫ |
-| Up | ↑ |
-| Down | ↓ |
-| Left | ← |
-| Right | → |
+| Key       | Symbol |
+|-----------|--------|
+| Option    | ⌥      |
+| Control   | ⌃      |
+| Command   | ⌘      |
+| Shift     | ⇧      |
+| Caps Lock | ⇪      |
+| Tab       | ⇥      |
+| Esc       | ⎋      |
+| Power     | ⌽      |
+| Return    | ↩      |
+| Delete    | ⌫      |
+| Up        | ↑      |
+| Down      | ↓      |
+| Left      | ←      |
+| Right     | →      |
 
 Emoji:
 
-:exclamation: Use emoji icons to enhance text. :+1:  Look up emoji codes at [emoji-cheat-sheet.com](http://emoji-cheat-sheet.com/)
+:exclamation: Use emoji icons to enhance text. :+1:  Look up emoji codes
+at [emoji-cheat-sheet.com](http://emoji-cheat-sheet.com/)
 
     Markup : Code appears between colons :EMOJICODE:

@@ -1,5 +1,3 @@
-import {resolve} from "node:url";
-
 export default defineNuxtConfig({
     devtools: {enabled: true},
     css: [
@@ -62,5 +60,11 @@ export default defineNuxtConfig({
             "I can not hear the people sing.",
         defaultLocale:
             "en"
+    },
+
+    content: {
+        highlight: {
+            theme: "min-dark"
+        }
     }
 })
