@@ -42,7 +42,7 @@ export default defineEventHandler(async (event) => {
             owner: people.username,
             repo: "flowing-time",
             path: "assets/data/links.json",
-            message: `Add ${people.display_name}`,
+            message: `Add ${data.title}`,
             committer: {
                 name: people.display_name,
                 email: people.email === null ? "anonymous@example.com" : people.email
@@ -53,8 +53,21 @@ export default defineEventHandler(async (event) => {
                 'X-GitHub-Api-Version': '2022-11-28'
             }
         })
+
+        await octokit.request('POST /repos/{owner}/{repo}/pulls', {
+            owner: "NanamiNakano",
+            repo: "flowing-time",
+            title: `Add ${data.title}`,
+            body: `Apply for ${data.title} by ${[people.display_name]}`,
+            head: `${people.username}:main`,
+            head_repo: "flowing-time",
+            base: "main",
+            maintainer_can_modify: true,
+            headers: {
+                'X-GitHub-Api-Version': '2022-11-28'
+            }
+        })
     } catch (error) {
-        console.log(error)
         return "Error"
     }
 })

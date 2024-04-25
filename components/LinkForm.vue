@@ -30,7 +30,7 @@ if (response !== "Error") {
 
 
 async function onSubmit(event: FormSubmitEvent<Schema>) {
-  await $fetch("/api/github/commit-link", {
+  await $fetch("/api/github/add-link", {
     method: "POST",
     params: {
       data: event.data,
