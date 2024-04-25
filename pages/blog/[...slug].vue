@@ -1,6 +1,5 @@
 <script setup lang="ts">
 const route = useRoute()
-const colorMode = useColorMode()
 
 const path = computed(() => {
   return "/" + route.path.slice(6)
