@@ -1,4 +1,4 @@
-import {Octokit} from "octokit";
+import {Octokit, RequestError} from "octokit";
 
 export default defineEventHandler(async (event) => {
     if (event.method !== "POST") {
@@ -67,7 +67,12 @@ export default defineEventHandler(async (event) => {
                 'X-GitHub-Api-Version': '2022-11-28'
             }
         })
+
+        return "Success"
     } catch (error) {
+        if (error instanceof RequestError && error.message.includes("A pull request already exists")) {
+            return "Success"
+        }
         return "Error"
     }
 })

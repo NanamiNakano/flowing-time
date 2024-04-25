@@ -1,8 +1,9 @@
 <script setup lang="ts">
 import {z} from "zod"
 import type {FormSubmitEvent} from "#ui/types"
+import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 
-defineProps({
+const props = defineProps({
   disabled: Boolean,
 })
 
@@ -21,6 +22,14 @@ const state = ref({
   iconUrl: undefined,
   description: undefined,
 })
+const submitted = ref(false)
+const submittable = computed(() => {
+  if (props.disabled || (!props.disabled && submitted.value)) {
+    return true
+  } else {
+    return false
+  }
+})
 
 let user: People
 const response = await $fetch("/api/github/user")
@@ -30,13 +39,16 @@ if (response !== "Error") {
 
 
 async function onSubmit(event: FormSubmitEvent<Schema>) {
-  await $fetch("/api/github/add-link", {
+  const result = await $fetch("/api/github/add-link", {
     method: "POST",
     params: {
       data: event.data,
       user: user
     }
   })
+  if (result === "Success") {
+    submitted.value = true
+  }
 }
 </script>
 
@@ -58,8 +70,11 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
       <UInput v-model="state.description"/>
     </UFormGroup>
 
-    <UButton type="submit" color="pink" :disabled="disabled">
-      Submit
-    </UButton>
+    <div class="container flex flex-row justify-between items-center">
+      <UButton type="submit" color="pink" :disabled="submittable">
+        Submit
+      </UButton>
+      <FontAwesomeIcon v-if="submitted" :icon="['fas', 'check']" size="lg"/>
+    </div>
   </UForm>
 </template>
