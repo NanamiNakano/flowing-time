@@ -1,6 +1,4 @@
 <script setup lang="ts">
-
-
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 
 const colorMode = useColorMode()

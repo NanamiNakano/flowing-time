@@ -1,12 +1,19 @@
+import {resolve} from "node:url";
+
 export default defineNuxtConfig({
     devtools: {enabled: true},
-    css: ["~/assets/css/tailwind.css", "~/assets/css/transition.css", "@fortawesome/fontawesome-svg-core/styles.css"],
+    css: [
+        "~/assets/css/tailwind.css",
+        "~/assets/css/transition.css",
+        "@fortawesome/fontawesome-svg-core/styles.css"
+    ],
     modules: [
         "@nuxt/fonts",
         "@nuxt/image",
         "@nuxt/ui",
         "@nuxt/eslint",
-        "@nuxtjs/seo"
+        "@nuxtjs/seo",
+        "@nuxt/content"
     ],
 
     postcss: {
