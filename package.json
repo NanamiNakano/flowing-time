@@ -40,6 +40,7 @@
   },
   "devDependencies": {
     "@nuxt/eslint": "^0.3.7",
+    "@nuxtjs/sitemap": "^5.1.4",
     "@tailwindcss/typography": "^0.5.12",
     "autoprefixer": "^10.4.19",
     "date-fns": "^3.6.0",
