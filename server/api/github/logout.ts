@@ -1,3 +1,3 @@
 export default defineEventHandler((event) => {
-    return deleteCookie(event, "GitHubOauthResponse")
+	return deleteCookie(event, "GitHubOauthResponse")
 })

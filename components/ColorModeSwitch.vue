@@ -1,19 +1,26 @@
 <script setup lang="ts">
-import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome"
 
 const colorMode = useColorMode()
 
 function toggleColorMode() {
-  colorMode.preference === "light" ? colorMode.preference = "dark" : colorMode.preference = "light"
+	colorMode.preference === "light" ? colorMode.preference = "dark" : colorMode.preference = "light"
 }
 
 const computedIcon = computed(() => {
-  return colorMode.preference === "light" ? ["fas", "moon"] : ["fas", "sun"]
+	return colorMode.preference === "light" ? ["fas", "moon"] : ["fas", "sun"]
 })
 </script>
 
 <template>
-  <UButton variant="ghost" color="white" @click="toggleColorMode">
-    <FontAwesomeIcon :icon="computedIcon" size="xl"/>
-  </UButton>
+	<UButton
+		variant="ghost"
+		color="white"
+		@click="toggleColorMode"
+	>
+		<FontAwesomeIcon
+			:icon="computedIcon"
+			size="xl"
+		/>
+	</UButton>
 </template>
