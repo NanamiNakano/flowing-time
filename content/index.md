@@ -1,3 +1,0 @@
-# WIP
-
-[Typography](/blog/typography)

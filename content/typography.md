@@ -1,4 +1,10 @@
-Markdown Typography<a name="TOP"></a>
+---
+title: "Markdown Typography"
+description: "Example page for typography"
+date: "1980-01-01"
+---
+
+Markdown Typography<a id="TOP"></a>
 ===================
 
 - - - - 
@@ -57,10 +63,10 @@ ___Strong emphasized text___
 
 Table, like this one :
 
- First Header | Second Header 
---------------|---------------
- Content Cell | Content Cell  
- Content Cell | Content Cell  
+| First Header | Second Header |
+|--------------|---------------|
+| Content Cell | Content Cell  |
+| Content Cell | Content Cell  |
 
 ```
 First Header  | Second Header
@@ -71,10 +77,10 @@ Content Cell  | Content Cell
 
 Adding a pipe `|` in a cell :
 
- First Header | Second Header 
---------------|---------------
- Content Cell | Content Cell  
- Content Cell | \|            
+| First Header | Second Header |
+|--------------|---------------|
+| Content Cell | Content Cell  |
+| Content Cell | \|            |
 
 ```
 First Header  | Second Header
@@ -85,10 +91,10 @@ Content Cell  |  \|
 
 Left, right and center aligned table
 
- Left aligned Header | Right aligned Header | Center aligned Header 
-|:--------------------|---------------------:|:---------------------:
- Content Cell        |         Content Cell |     Content Cell      
- Content Cell        |         Content Cell |     Content Cell      
+| Left aligned Header | Right aligned Header | Center aligned Header |
+|:--------------------|---------------------:|:---------------------:|
+| Content Cell        |         Content Cell |     Content Cell      |
+| Content Cell        |         Content Cell |     Content Cell      |
 
 ```
 Left aligned Header | Right aligned Header | Center aligned Header
@@ -112,7 +118,7 @@ Content Cell  | Content Cell | Content Cell
                 "artist": "Kasabian",
                 "album": "Kasabian",
                 "picture": null,
-                "link": "http://open.spotify.com/track/5jhJur5n4fasblLSCOcrTp"
+                "link": "https://open.spotify.com/track/5jhJur5n4fasblLSCOcrTp"
             }
         }
     }
