@@ -68,4 +68,10 @@ export default defineNuxtConfig({
             theme: "min-dark"
         }
     },
+
+    eslint: {
+        config: {
+            stylistic: true
+        }
+    }
 })

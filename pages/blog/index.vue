@@ -9,7 +9,7 @@ onMounted(async () => {
   quotable.value = (<Quotable>data.value).content
 })
 
-const articles = ref(await queryContent("/").sort({ date: -1 }).find())
+const articles = ref(await queryContent("/").sort({date: -1}).find())
 
 const icon = computed(() => {
   if (reversed.value) {
@@ -37,14 +37,15 @@ function changeSort() {
       <UDivider class="py-4"/>
       <div class="flex">
         <h2 class="text-4xl">Articles</h2>
-        <UButton @click="changeSort" color="white" variant="ghost">
+        <UButton color="white" variant="ghost" @click="changeSort">
           <FontAwesomeIcon :icon="icon" size="lg"/>
         </UButton>
       </div>
-        <div v-for="article in articles" :key="article._path">
-          <ArticleCard :title="article.title" :description="article.description" :path="article._path"
-                       :date="article.date"/>
-        </div>
+      <div v-for="article in articles" :key="article._path">
+        <ArticleCard
+            :title="article.title" :description="article.description" :path="article._path"
+            :date="article.date"/>
+      </div>
     </div>
   </main>
 </template>
