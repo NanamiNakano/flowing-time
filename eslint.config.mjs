@@ -1,15 +1,15 @@
 // @ts-check
-import withNuxt from './.nuxt/eslint.config.mjs'
+import withNuxt from "./.nuxt/eslint.config.mjs"
 
 export default withNuxt(
-    {
-        languageOptions: {
-            parserOptions: {
-                parser: "@typescript-eslint/parser",
-                ecmaFeatures: {
-                    jsx: false
-                }
-            }
-        }
-    }
+	{
+		languageOptions: {
+			parserOptions: {
+				parser: "@typescript-eslint/parser",
+				ecmaFeatures: {
+					jsx: false,
+				},
+			},
+		},
+	},
 )
