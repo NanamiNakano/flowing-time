@@ -7,7 +7,7 @@ export default defineSitemapEventHandler(async (e) => {
 	return contentList
 		.map((c) => {
 			return asSitemapUrl({
-				loc: `/blog/${c._path}`,
+				loc: `/blog${c._path}`,
 				lastmod: c.date,
 			})
 		})
