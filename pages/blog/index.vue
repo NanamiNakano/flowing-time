@@ -45,7 +45,7 @@ function changeSort() {
 					Articles
 				</h2>
 				<UButton
-					color="white"
+					color="gray"
 					variant="ghost"
 					@click="changeSort"
 				>
