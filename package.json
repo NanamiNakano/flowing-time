@@ -42,6 +42,7 @@
     "@nuxt/eslint": "^0.3.7",
     "@tailwindcss/typography": "^0.5.12",
     "autoprefixer": "^10.4.19",
+    "date-fns": "^3.6.0",
     "eslint": "^9.0.0",
     "postcss": "^8.4.38"
   }

@@ -39,7 +39,8 @@ export default defineNuxtConfig({
     },
 
     app: {
-        layoutTransition: {name: 'layout', mode: 'out-in'}
+        layoutTransition: {name: 'layout', mode: 'out-in'},
+        pageTransition: {name: 'layout', mode: 'out-in'},
     },
 
     fonts: {
@@ -66,5 +67,5 @@ export default defineNuxtConfig({
         highlight: {
             theme: "min-dark"
         }
-    }
+    },
 })

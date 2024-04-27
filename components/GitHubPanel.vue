@@ -7,11 +7,13 @@ const authorized = ref(false)
 const user = ref()
 const forked = ref(false)
 
-const response = await $fetch("/api/github/user")
-if (response !== "Error") {
-  authorized.value = true
-  user.value = response as People
-}
+onMounted(async () => {
+  const response = await $fetch("/api/github/user")
+  if (response !== "Error") {
+    authorized.value = true
+    user.value = response as People
+  }
+})
 
 function auth() {
   navigateTo(`https://github.com/login/oauth/authorize?client_id=${runtimeConfig.public.github.clientId}&redirect_uri=${runtimeConfig.public.site.uri}/github/callback`, {
