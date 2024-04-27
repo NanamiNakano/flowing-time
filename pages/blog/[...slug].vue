@@ -8,14 +8,14 @@ const path = computed(() => {
 })
 
 const {data} = await useAsyncData('home', () => queryContent(path.value).findOne())
-const date = parse(data?.value?.date ?? "1989/06/04", "yyyy/MM/dd", new Date())
+const date = parse(data?.value?.date ?? "1989-06-04", "yyyy-MM-dd", new Date())
 </script>
 
 <template>
   <main>
-    <div class="container mx-auto px-8 lg:px-16 flex flex-col justify-center items-center">
+    <div class="container mx-auto px-8 lg:px-16 justify-center lg:flex">
       <div class="items-start">
-        <time v-if="data?.value?.date !== undefined" :datetime="`${format(date, 'yyyy-MM-dd')}`" class="pb-2">
+        <time v-if="data?.date !== undefined" :datetime="data?.date" class="pb-2">
           {{ format(date, "yyyy MMM dd, EEEE") }}
         </time>
         <article class="prose dark:prose-invert prose-pre:not-prose lg:prose-lg">

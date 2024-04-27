@@ -14,15 +14,17 @@ defineProps({
   },
   date: {
     type: String,
-    default: "1980/01/01"
+    default: "1980-01-01"
   }
 })
 </script>
 
 <template>
-  <UButton :to="`/blog${path}`" color="white" variant="link" :padded="false">
-    <h3>{{ title }}</h3>
+  <div class="py-2">
+    <UButton :to="`/blog${path}`" color="white" variant="link" :padded="false">
+      <h3 class="text-2xl">{{ title }}</h3>
+    </UButton>
     <p>{{ description }}</p>
-    <p>{{ date }}</p>
-  </UButton>
+    <time :datetime="date" class="font-light">{{ date }}</time>
+  </div>
 </template>

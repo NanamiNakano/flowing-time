@@ -1,7 +1,7 @@
 ---
 title: "Markdown Typography"
 description: "Example page for typography"
-date: "2024/04/27"
+date: "1980-01-01"
 ---
 
 Markdown Typography<a id="TOP"></a>
