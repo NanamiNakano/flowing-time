@@ -15,7 +15,7 @@ const computedIcon = computed(() => {
 <template>
 	<UButton
 		variant="ghost"
-		color="white"
+		color="gray"
 		@click="toggleColorMode"
 	>
 		<FontAwesomeIcon
