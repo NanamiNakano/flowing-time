@@ -1,11 +1,28 @@
 <script setup lang="ts">
+import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
+
 const quotable = ref("")
+const reversed = ref(true)
 
 onMounted(async () => {
   const {data} = await useFetch("https://api.quotable.io/random")
   quotable.value = (<Quotable>data.value).content
 })
 
+const articles = ref(await queryContent("/").sort({ date: -1 }).find())
+
+const icon = computed(() => {
+  if (reversed.value) {
+    return ['fas', 'arrow-up-wide-short']
+  } else {
+    return ['fas', 'arrow-down-short-wide']
+  }
+})
+
+function changeSort() {
+  reversed.value = !reversed.value
+  articles.value.reverse()
+}
 </script>
 
 <template>
@@ -18,13 +35,16 @@ onMounted(async () => {
         </div>
       </div>
       <UDivider class="py-4"/>
-      <h2 class="text-4xl">Articles</h2>
-      <ContentList path="/" v-slot="{ list }">
-        <div v-for="article in list" :key="article._path">
+      <div class="flex">
+        <h2 class="text-4xl">Articles</h2>
+        <UButton @click="changeSort" color="white" variant="ghost">
+          <FontAwesomeIcon :icon="icon" size="lg"/>
+        </UButton>
+      </div>
+        <div v-for="article in articles" :key="article._path">
           <ArticleCard :title="article.title" :description="article.description" :path="article._path"
                        :date="article.date"/>
         </div>
-      </ContentList>
     </div>
   </main>
 </template>
