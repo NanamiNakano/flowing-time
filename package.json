@@ -30,11 +30,13 @@
     "@nuxt/ui": "^2.15.2",
     "@nuxtjs/seo": "2.0.0-rc.10",
     "@vercel/analytics": "^1.2.2",
+    "algoliasearch": "^4.23.3",
     "badge-maker": "^3.3.1",
     "nuxt": "^3.11.2",
     "octokit": "^3.2.0",
     "tailwindcss": "^3.4.3",
     "vue": "^3.4.22",
+    "vue-instantsearch": "^4.16.0",
     "vue-router": "^4.3.0",
     "zod": "^3.22.5"
   },

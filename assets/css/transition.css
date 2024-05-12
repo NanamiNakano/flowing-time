@@ -2,7 +2,13 @@
 .layout-leave-active {
     transition: opacity 0.15s;
 }
+
 .layout-enter-from,
 .layout-leave-to {
     opacity: 0.3;
+}
+
+body * {
+    @apply transition-colors ease-in-out;
+    transition-duration: 35ms;
 }
