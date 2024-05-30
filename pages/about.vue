@@ -26,7 +26,7 @@ useHead({
       </div>
     </div>
     <UDivider class="py-4"/>
-    <div class="flex flex-col lg:flex-row justify-between space-x-2 space-y-2">
+    <div class="flex flex-col lg:flex-row justify-between space-y-2 lg:space-x-2">
       <div class="container text-left space-y-4">
         <h1 class="text-6xl font-semibold">
           Skills
