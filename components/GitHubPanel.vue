@@ -97,7 +97,7 @@ async function forkRepo() {
 
 					<div
 						v-else
-						class="container flex flex-row justify-center items-center space-x-2"
+						class="container flex flex-col justify-center items-center space-x-2"
 					>
 						<UButton @click="auth">
 							<FontAwesomeIcon
@@ -107,9 +107,7 @@ async function forkRepo() {
 							Auth with GitHub
 						</UButton>
 
-						<div>
-							OR
-						</div>
+						<UDivider label="OR"/>
 
 						<UButton
 							:padded="false"
