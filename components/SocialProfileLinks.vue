@@ -4,6 +4,7 @@
 			to="https://github.com/NanamiNakano"
 			class="rounded-full bg-gray-800 text-white p-2 flex items-center justify-center w-12 h-12"
 			target="_blank"
+			alt="GitHub Profile"
 		>
 			<FontAwesomeIcon
 				:icon="['fab', 'github']"
@@ -11,9 +12,10 @@
 			/>
 		</NuxtLink>
 		<NuxtLink
-			to="https://twitter.com/thynanami"
+			to="https://x.com/thynanami"
 			class="rounded-full bg-blue-400 text-white p-2 flex items-center justify-center w-12 h-12"
 			target="_blank"
+			alt="X(Twitter) Profile"
 		>
 			<FontAwesomeIcon
 				:icon="['fab', 'twitter']"
@@ -24,6 +26,7 @@
 			to="https://patreon.com/thynanami"
 			class="rounded-full bg-orange-500 text-white p-2 flex items-center justify-center w-12 h-12"
 			target="_blank"
+			alt="Patreon"
 		>
 			<FontAwesomeIcon
 				:icon="['fab', 'patreon']"
@@ -34,6 +37,7 @@
 			to="https://thynanami.t.me"
 			class="rounded-full bg-blue-300 text-white p-2 flex items-center justify-center w-12 h-12"
 			target="_blank"
+			alt="Telegram"
 		>
 			<FontAwesomeIcon
 				:icon="['fab', 'telegram']"
@@ -44,6 +48,7 @@
 			to="https://steamcommunity.com/id/thynanami"
 			class="rounded-full bg-gray-800 text-white p-2 flex items-center justify-center w-12 h-12"
 			target="_blank"
+			alt="Steam Profile"
 		>
 			<FontAwesomeIcon
 				:icon="['fab', 'steam']"
