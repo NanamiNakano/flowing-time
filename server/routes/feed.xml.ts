@@ -6,6 +6,7 @@ export default defineEventHandler(async (event) => {
 		title: "「The Nanami」",
 		site_url: "https://thynanami.dev",
 		feed_url: "https://thynanami.dev/feed.xml",
+		description: "Nanami Nakano's Blog feedId:42498720478834688+userId:41160921760161792",
 	})
 
 	const docs = await serverQueryContent(event).sort({ date: -1 }).where({ _partial: false }).find()
