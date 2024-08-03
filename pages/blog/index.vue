@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome"
 
 const quotable = ref("")
@@ -31,9 +31,22 @@ function changeSort() {
 		<div class="container mx-auto px-8 lg:px-16">
 			<div class="flex flex-col lg:flex-row justify-between lg:items-center">
 				<div class="text-left space-y-4">
-					<h1 class="text-5xl font-semibold">
-						Blog
-					</h1>
+					<div class="flex gap-2 items-end">
+						<h1 class="text-5xl font-semibold">
+							Blog
+						</h1>
+						<UButton
+							to="/feed.xml"
+							target="_blank"
+							square
+							variant="ghost"
+						>
+							<FontAwesomeIcon
+								:icon="['fas', 'rss']"
+								size="xl"
+							/>
+						</UButton>
+					</div>
 					<h2 class="lg:text-lg">
 						{{ quotable }}
 					</h2>
@@ -60,10 +73,10 @@ function changeSort() {
 				:key="article._path"
 			>
 				<ArticleCard
-					:title="article.title"
+					:date="article.date"
 					:description="article.description"
 					:path="article._path"
-					:date="article.date"
+					:title="article.title"
 				/>
 			</div>
 		</div>
