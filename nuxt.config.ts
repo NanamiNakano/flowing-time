@@ -85,4 +85,10 @@ export default defineNuxtConfig({
 			"/api/__sitemap__/urls",
 		],
 	},
+
+	nitro: {
+		prerender: {
+			routes: ["/feed.xml"],
+		},
+	},
 })
